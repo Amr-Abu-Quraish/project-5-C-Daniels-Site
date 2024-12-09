@@ -1,0 +1,462 @@
+/**============== Start Global Style ==============**/
+body{
+    font-family: "Poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+}
+:root{
+    --main-color: #1C1C1C;
+    --title-color:#343434;
+    --first-bg-color:#FFFFFF;
+    --second-bg-color:#F7F7F7;
+}
+html {
+    
+    scroll-padding-top: 65px ;
+}
+.main-color {
+    color: var(--main-color);
+}
+.title-color {
+    color: var(--title-color);
+}
+.bgcolor{
+  transition: all 1s;
+  background-color: #1C1C1C;
+  
+
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.bg-second{
+    background-color:#5B5B5B;
+}
+.first-bg{
+    background-color: var(--first-bg-color);
+}
+.second-bg{
+    background-color: var(--second-bg-color);
+}
+.padding-section{
+    padding: 80px 0px;
+}
+
+.w-90{
+    width: 90%;
+    height: 90%;
+}
+.w-95{
+    width: 95%;
+    height: 9%;
+}
+.fw-800{
+    font-weight: 800;
+}
+
+.main-title{
+    width: fit-content;
+    background-image: url(../images/dots.png);  
+    height: 35px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.main-title h2{
+    position: relative;
+    top: -25px;
+    margin-bottom: 0;
+}
+.main-title h2::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    right: -10px;
+    top: 55%;
+}
+
+/**============== End Global Style ==============**/
+
+/**===================== Start Navbar ==========================**/
+
+.nav-link{
+    position: relative;
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+ }
+  .nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 6px;
+    left: 0;
+    transition: width .5s ease-in-out;
+ }
+ .nav-link.active::after{
+    width: 75%;
+ }
+
+ /**===================== Start Navbar ==========================**/
+
+ /**===================== Start Header ==========================**/
+ header {
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7) ,rgba(0,0,0,0.7) ) ,url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+ }
+ header .container .home-content h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+ }
+ header .container .home-content h2 {
+    font-size: 60px;
+ }
+
+ header .container .home-content .social ul {
+  list-style: none;
+ }
+ header .container .home-content .social ul li a i   {
+    width: 40px;
+    height: 40px;
+    background-color:rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+ }
+ header .container .home-content .social ul li a {
+  text-decoration: none;
+ }
+ /**===================== End Header ==========================**/
+
+ /**===================== Star About ==========================**/
+.about .container .image {
+  position: relative;
+  padding: 0 0 0 30px;  
+}
+.about .container .image::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    
+}
+.about .container .image img {
+    z-index: 10;
+    position:relative;
+    left: 40px;
+}
+.about .container .my-btn .first-btn,
+.about .container .my-btn .second-btn {
+    transition: 1s;
+}
+.about .container .my-btn .first-btn a,
+.about .container .my-btn .second-btn:hover a {
+    color: #fff;  
+}
+ 
+.about .container .my-btn .first-btn:hover  {
+    background-color: var(--first-bg-color);
+   
+}
+.about .container .my-btn .first-btn:hover a,
+.about .container .my-btn .second-btn a {
+    color: #000;
+}
+
+.about .container .my-btn .second-btn:hover  {
+    background-color: var(--main-color);
+   
+}
+
+
+ /**===================== End About ==========================**/
+
+
+  /**===================== Start Services ==========================**/
+ 
+.services .container .card {
+    border-radius: 17px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.services .container .card span  {
+    background-color:#e3e0e0;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: .5s;
+  }
+  .services .container .card:hover span {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+  /**===================== End Services ==========================**/
+
+
+  /**===================== Start Portfolio ==========================**/
+  .portfolio .nav .nav-link {
+    color: #000;
+    padding-inline: 20px!important;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .portfolio .nav .nav-link::before{
+    content: '';
+    position: absolute;
+   width: 0;
+   height: 3px;
+   background-color:#000;
+   top: 38px;
+   left: 15px;
+   transition: .5s ease-in-out;
+ }
+ .portfolio .nav .nav-link.active::before {
+    
+    width:70% ;
+ }
+ .portfolio .nav .nav-link.active{
+    background-color: transparent;
+ }
+ .portfolio .image{
+    position: relative;
+    overflow: hidden;
+ }
+ .portfolio .image .layer {
+    width: 96%;
+    height: 96%;
+    background-color: #FEFEFE;
+    position: absolute;
+    top:7px;
+    left: 8px;
+    transition: .2s ease-in-out;
+    opacity: 0;
+ }
+ .portfolio .image:hover .layer{
+    opacity: 1;
+ }
+ .portfolio .image .layer .icon a  {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: .5s;
+ }
+ .portfolio .image .layer .icon .first-icon:hover,
+ .portfolio .image .layer .icon .second-icon:hover{
+    background-color: var(--second-bg-color);
+    color: #000;
+ }
+ 
+ .modal-content button {
+    position: absolute;
+    right: 10px;
+ } 
+
+  /**===================== End Portfolio ==========================**/
+
+
+  /**===================== Start Testimonial ==========================**/
+.clients .carousel img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.clients .carousel .carousel-indicators [data-bs-target="#carouselExampleCaptions"]{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color:  #869791;
+}
+.clients .carousel .carousel-indicators [data-bs-target="#carouselExampleCaptions"].active{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color:  #869791;
+}
+  /**===================== End Testimonial =========================**/
+
+
+  /**===================== Start Team =========================**/
+  .teams .card {
+    position: relative;
+    overflow: hidden;
+  }
+  .teams .card img {
+    transition: .5s;
+  }
+  .teams .card .image:hover img{
+    transform: scale(1.1);
+
+  }
+
+  .teams .card .card-body {
+    z-index: 5;
+  }
+  .teams .card .inner .layer {
+    width: 96%;
+    height: 75%;
+    background-color: #FEFEFE;
+    position: absolute;
+    top:7px;
+    left: 8px;
+    transition: .2s ease-in-out;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  .teams .card:hover .layer{
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+  .teams .card .layer a {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 0;
+    transition: all .5s;
+  } 
+  .teams .card .layer a:hover{
+    background-color: var(--first-bg-color);
+    color: var(--main-color);
+  }
+  /**===================== End Team =========================**/
+
+
+
+  /**===================== Start Contact =========================**/
+
+  .contact .container .content i {
+    background-color:#e3e0e0;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: .5s;
+  }
+  .contact .container .content i:hover{
+    background-color: var(--main-color);
+    color: #fff;
+  }
+  
+  .contact .container .form-input input{
+    background-color: #F4F4F4;
+    height: 40px;
+    padding-left: 15px;
+  }
+  .contact .container .form-input textarea{
+    background-color: #F4F4F4;
+    resize: vertical;
+    height: 170px;
+    padding-left: 15px;
+  }
+  .contact .container .form-input input:focus,
+  .contact .container .form-input textarea:focus{
+    outline: 0;
+  }
+
+.contact .container button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 10px 40px;
+    border-radius: 8px;
+    transition: .5s;
+}
+.contact .container button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.contact .container button:hover{
+    background-color: var(--first-bg-color);
+
+   
+}
+.contact .container button:hover a{
+    color: var(--main-color);
+}
+
+  /**===================== End Contact =========================**/
+
+  /**===================== Start Footer =========================**/
+  .footer p {
+    color:#748182;
+    font-size: 15px;
+    word-spacing: 2px;
+    padding-top: 15px;
+  }
+  /**===================== End Footer =========================**/
+  
+  
+
+  
+  
+  /**===================== Start Media-Query =========================**/
+  @media screen and  (max-width:576px) {
+    .nav-link::after,
+   .nav-link.active::after
+ {
+    display: none;
+ }
+ nav .navbar-toggler-icon{
+    background-color: #fff;
+  }
+
+  header .home-content {
+   text-align: center;
+  }
+  header .home-content h2 span {
+    font-size: 30px;
+  }
+
+}
+
+
+
+
+
+
+  /**===================== End Media-Query =========================**/
+ 
+
+
